@@ -5,12 +5,12 @@ let todos = [
 ];
 
 function toggleCompletedAll() {
-  todos = todos.map(todo => ({ ...{ ...todo }, completed: true }));
+  todos = todos.map(todo => ({ ...todo, completed: true }));
+  return console.log(todos);
 }
 
 toggleCompletedAll();
 
-console.log(todos);
 /*
 [
   { id: 3, content: 'HTML', completed: true },
