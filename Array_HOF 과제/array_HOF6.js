@@ -7,10 +7,11 @@ let todos = [
 
 function toggleCompletedById(id) {
   todos = todos.map(todo => (todo.id === id ? { ...todo, completed: !todo.completed } : todo));
-  return console.log(todos);
+  console.log(todos); // node 환경에서 확인용으로 삽입
+  return todos;
 }
 
-toggleCompletedById(2);
+toggleCompletedById(3);
 
 /*
 [

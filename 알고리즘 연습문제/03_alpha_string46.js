@@ -3,9 +3,10 @@
 function alphaString46(s) {
   let temp = 0;
   for (let i = 0; i < s.length; i++) {
-    if (!'0' && !+s.charAt(i)) return false;
+    if (s.charAt(i) !== '0' && !+s.charAt(i)) return false;
     temp += 1;
   }
+  return (temp >= 4 && temp <= 6) || false;
 }
 
-console.log(alphaString46('0234'));
+console.log(alphaString46('0000a'));

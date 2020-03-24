@@ -6,7 +6,8 @@ let todos = [
 
 function toggleCompletedAll() {
   todos = todos.map(todo => ({ ...todo, completed: true }));
-  return console.log(todos);
+  console.log(todos); // node 환경에서 확인용으로 삽입
+  return todos;
 }
 
 toggleCompletedAll();
