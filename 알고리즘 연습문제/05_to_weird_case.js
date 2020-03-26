@@ -9,14 +9,13 @@ function toWeirdCase(s) {
   }
   return temp.join('');
 }
-
-// 배열 고차 함수 응용
 console.log(toWeirdCase('hello world'));
 
+
+// 배열 고차 함수 응용
+
 function toWeirdCaseHof(s) {
-  let temp = [...s];
-  temp = temp.map((str, index) => (index % 2 ? str.toLowerCase() : str.toUpperCase()));
-  return temp.join('');
+  return [...s].map((str, index) => (index % 2 ? str.toLowerCase() : str.toUpperCase())).join('');
 }
 
 console.log(toWeirdCaseHof('hello world'));

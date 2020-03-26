@@ -13,7 +13,8 @@ console.log(alphaString46(''));
 
 
 // 배열 고차함수 응용 (.every)
+// 빈 문자열 대응 안됨..수정 예정
 function alphaString46ArrHof(s) {
-  return [...s].every((val, _, { length }) => (length > 3 && length < 7) && (+val || val === '0'));
+  return [...s].every((v, _, { length }) => (length > 3 && length < 7) && (+v || v === '0'));
 }
 console.log(alphaString46ArrHof('1234'));

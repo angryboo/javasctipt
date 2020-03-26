@@ -3,8 +3,7 @@
 // 예를 들어 n이 121이라면 이는 정수 11의 제곱이므로 (11+1)의 제곱인 144를 리턴하고, 3이라면 ‘no’을 리턴한다.
 
 function nextSqaure(n) {
-  const temp = Math.sqrt(n);
-  return temp % 1 === 0 ? (temp + 1) ** 2 : 'no';
+  return Math.sqrt(n) % 1 === 0 ? (Math.sqrt(n) + 1) ** 2 : 'no';
 }
 
 console.log(nextSqaure()); // no

@@ -18,9 +18,7 @@ console.log(hideNumbers('027778888'));
 
 // 배열 고차함수 응용
 function hideNumbersHof(str) {
-  let temp = [...str];
-  temp = temp.map((item, index) => ((temp.length - index) <= 4 ? item : '*'));
-  return temp.join('');
+  return [...str].map((item, index) => (([...str].length - index) <= 4 ? item : '*')).join('');
 }
 
 console.log(hideNumbersHof('01033334444')); // *******4444

@@ -17,3 +17,16 @@ function getMinValueFromArray(array) {
   return temp;
 }
 console.log(getMinValueFromArray([3, 6, -2, -5, 7, 3])); // -5
+
+
+// 배열 고차함수 응용
+
+function getMaxValueFromArrayHof(array) {
+  return array.reduce((acc, cur) => (acc > cur ? acc : cur), 0);
+}
+console.log(getMaxValueFromArrayHof([3, 6, -2, -5, 7, 3])); // 7
+
+function getMinValueFromArrayHof(array) {
+  return array.reduce((acc, cur) => (acc < cur ? acc : cur), 0);
+}
+console.log(getMinValueFromArrayHof([3, 6, -2, -5, 7, 3])); // -5

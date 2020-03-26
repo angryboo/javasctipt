@@ -4,8 +4,9 @@
 // 예를 들어 주어진 배열이 [4, 1, 3, 2]이라면 true, [4, 1, 3] 또는 [1, 3]이라면 false를 반환한다.
 
 function isNotOverlapArray(array) {
-  
+  return array.sort((a, b) => a - b).every((val, i) => val === i + 1);
 }
 
 console.log(isNotOverlapArray([4, 1, 3, 2])); // true
 console.log(isNotOverlapArray([4, 1, 3])); // false
+console.log(isNotOverlapArray([1, 5])); // falss

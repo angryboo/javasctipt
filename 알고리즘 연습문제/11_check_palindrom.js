@@ -19,3 +19,13 @@ console.log(checkPalindrom('dad')); // true
 console.log(checkPalindrom('mom')); // true
 console.log(checkPalindrom('palindrom')); // false
 console.log(checkPalindrom('s')); // true
+
+
+// 배열 고차함수 응용
+function checkPalindrom2(str) {
+  return [...str].every((value, i) => value === [...str].reverse()[i]);
+}
+console.log(checkPalindrom2('dad')); // true
+console.log(checkPalindrom2('mom')); // true
+console.log(checkPalindrom2('palindrom')); // false
+console.log(checkPalindrom2('s')); // true
