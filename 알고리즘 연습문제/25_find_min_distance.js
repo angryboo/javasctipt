@@ -3,11 +3,8 @@
 // 예를들어 [1, 3, 4, 8, 13, 17, 20, 23, 24]이 주어졌다면, 결과값은 [[3, 4], [23, 24]]가 될 것이다.
 
 function findMinDistance(array) {
-  let minValue = array[0];
+  const minValue = Math.min(...array);
   const tempArr = [];
-  for (let i = 0; i < array.length - 1; i++) {
-    if (minValue > array[i + 1] - array[i]) minValue = array[i + 1] - array[i];
-  }
   for (let j = 0; j < array.length - 1; j++) {
     if (minValue === array[j + 1] - array[j]) tempArr.push([array[j]].concat(array[j + 1]));
   }
