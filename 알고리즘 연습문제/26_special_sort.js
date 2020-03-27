@@ -3,7 +3,13 @@
 // 예를 들어, [-1, 1, 3, -2, 2, 0]이 주어졌을 때, [-1, -2, 0, 1, 2, 3]를 반환한다.
 
 function specialSort(array) {
-
+  const arrPosi = [];
+  const arrNega = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] >= 0) arrPosi.push(array[i]);
+    else arrNega.push(array[i]);
+  }
+  return arrNega.sort((a, b) => Math.abs(a) - Math.abs(b)).concat(arrPosi.sort((a, b) => a - b));
 }
 
 const testArray = [-1, 1, 3, -2, 2, 0, 10, 11, 20];
