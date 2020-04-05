@@ -1,0 +1,16 @@
+ul, li {
+  list-style: none;
+  padding-left: 0px;
+  margin: 0px;
+}
+.matrix {
+  display: flex;
+  text-align: center;
+}
+.matrix > li {
+  width: 25px;
+  height: 25px;
+  margin-left: 1px;
+  margin-top: 1px;
+  border: 1px solid violet;
+}

@@ -12,7 +12,7 @@ function specialSort(array) {
   return arrNega.sort((a, b) => Math.abs(a) - Math.abs(b)).concat(arrPosi.sort((a, b) => a - b));
 }
 
-const testArray = [-1, 1, 3, -2, 2, 0, 10, 11, 20];
+const testArray = [-1, 1, 3, -2, 2, 0, 10, 11, 20, -7];
 
-console.log(testArray); // [ -1, 1, 3, -2, 2, 0 ]
-console.log(specialSort(testArray)); // [ -1, -2, 0, 1, 2, 3 ]
+console.log(testArray);
+console.log(specialSort(testArray));
